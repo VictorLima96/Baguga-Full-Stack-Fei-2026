@@ -1,0 +1,27 @@
+body{
+
+background-color: black;
+
+color: aliceblue;
+
+padding: auto;
+
+border-radius: 8px;
+
+text-align: center;
+
+}
+
+img{
+
+animation: girar 2s linear infinite;
+
+}
+
+@keyframes girar{
+
+from{transform: rotate(0deg);}
+
+to{transform: rotate(360deg);}
+
+}
