@@ -1,0 +1,134 @@
+body{
+
+background-color: black;
+
+text-align: center;
+
+}
+
+h1{
+
+font-size: xx-large;
+
+color: white;
+
+font-family: "Comic Sans MS", cursive, "sans-serif";
+
+}
+
+p{
+
+font-size: medium;
+
+color: white;
+
+font-family: "Comic Sans MS", cursive, "sans-serif";
+
+}
+
+.menus{
+
+background-color: white;
+
+color: black;
+
+}
+
+/* Change text color */
+
+.chartreuse{
+
+color: chartreuse;
+
+}
+
+.orangered{
+
+color: orangered;
+
+}
+
+.orange{
+
+color: orange;
+
+}
+
+#p_1{
+
+background-color: crimson;
+
+}
+
+div a{
+
+color: white;    
+
+}
+
+div a:hover{
+
+color: firebrick;    
+
+}
+
+.cube {
+
+align-content: center;
+
+width: 200px;
+
+height: 200px;
+
+position: relative;
+
+transform-style: preserve-3d;
+
+animation: rotate 5s infinite linear;
+
+}
+
+.face {
+
+position: absolute;
+
+width: 200px;
+
+height: 200px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+font-size: 24px;
+
+background: #f8b400;
+
+border: 2px solid #333;
+
+}
+
+.front { transform: translateZ(100px); }
+
+.back { transform: rotateY(180deg) translateZ(100px); }
+
+.right { transform: rotateY(90deg) translateZ(100px); }
+
+.left { transform: rotateY(-90deg) translateZ(100px); }
+
+.top { transform: rotateX(90deg) translateZ(100px); }
+
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+
+from { transform: rotateY(0); }
+
+to { transform: rotateY(360deg); }
+
+}
+
+
+
