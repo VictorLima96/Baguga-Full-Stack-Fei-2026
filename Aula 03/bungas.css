@@ -1,0 +1,64 @@
+body{
+
+background-color: black;
+
+color: aliceblue;
+
+padding: auto;
+
+border-radius: 8px;
+
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+text-align: center;
+
+}
+
+img{
+
+animation: girar 2s linear infinite;
+
+}
+
+@keyframes girar{
+
+from{transform: rotate(0deg);}
+
+to{transform: rotate(360deg);}
+
+}
+
+table{
+
+border-collapse: collapse;
+
+margin: 20px auto;
+
+width: 60%;
+
+max-width: 600px;
+
+color: aliceblue;
+
+}
+
+th, td{
+
+border: 1px solid aliceblue;
+
+padding: 10px;
+
+}
+
+.menus{
+
+background-color: white;
+
+color: black;
+
+}
+
+.button:active {
+  transform: scale(0.99);
+  box-shadow: none;
+}
