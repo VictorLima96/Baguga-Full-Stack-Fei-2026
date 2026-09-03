@@ -14,6 +14,27 @@ text-align: center;
 
 }
 
+.site_header{
+
+height: 210px;
+
+margin: 7px 7px 0;
+
+border: 3px solid darkblue;
+
+background: bisque;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 16px 3.5%;
+
+
+}
+
 img{
 
 animation: girar 2s linear infinite;
@@ -30,76 +51,72 @@ to{transform: rotate(360deg);}
 
 table{
 
+border: 5px dashed rgb(255, 0, 0);
+
 border-collapse: collapse;
 
-margin: auto;
+width: 25%;
 
-width: 60%;
-
-max-width: 600px;
-
-color: aliceblue;
+margin: 0 auto;
 
 }
 
 th, td{
 
-border: 1px solid aliceblue;
+color: red;
 
-padding: 10px;
+border: 4px double rgb(255, 0, 0);
+
+padding: 6px;
+
+text-align: center;
 
 }
 
-.menus{
+.text_fah {
+
+color: black;
+
+}
+
+.titulo{
+
+color: black;
+
+}
+
+.main-nav{
+
+height: 67px;
+
+margin: 0 7px;
+
+background: lightblue;
 
 display: flex;
 
-background-color: lightskyblue;
-
-color: darkred;
-
-padding-left: 120px;
+align-items: center;
 
 justify-content: center;
 
+gap: 145px;
 
 }
 
+.main-nav a{
 
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #4b4543;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 200px;
-  cursor: pointer;
+color: darkred;
+
+text-decoration: none;
+
+font-weight: bold;
+
 }
 
-.button span {
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+.h1{
 
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+color: darkgreen;
 
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
 }
 
 .h2{
@@ -110,104 +127,28 @@ color: black;
 
 }
 
-.div{
-  
-margin: 10px;
+.h3{
 
-padding: 5px;
+color: black;
 
-width: 20px;
-
-height: 20px;
+font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
 
-.dive{
 
-margin: 100px;
+.div_margin1{
 
-padding: 10px;
-
-width: 20px;
-
+margin-right: 35px;
 
 }
 
-.solida{
+.div_margin2{
 
-border: 2px, solid, white; 
-  
-}
-
-.pontilhada{
-
-border: 2px, dotted, black;
-
-}
-
-.traced{
-
-border: 2px, dashed, black;
-
-}
-
-.dupla{
-
-border: 5px, double, black;
-
-}
-
-.arredon{
-
-border-radius: 10px;
-
-box-shadow: 2px 4px gray;
-
-}
-
-.bg_div1{
-
-background-color: red;
-
-position: absolute;
-
-top: 50px;
-
-left: 25px;
-
-}
-
-.bg_div2{
-
-background-color: blue;
-
-position: relative;
-
-top: 50px;
-
-right: 25px;
-  
-}
-
-.bg_div3{
-
-background-color: green;
-
-position: fixed;
-
-bottom: 50px;
-
-left: 25px;
+margin-left: 35px;
 
 }
 
 .div_img{
-
-display: flex;
-
-align-items: center;
-
-gap: 275px;
 
 border: 2px, solid, blue; 
 
@@ -217,27 +158,64 @@ color: green;
 
 }
 
-.titulo{
+.site_footer{
 
-color: black;
+height: 105px;
 
-font-size: 20px;
+margin: 7px 7px 0;
 
-}
-
-.div_img_2{
+background: bisque;
 
 display: flex;
 
 align-items: center;
 
-gap: 72px;
+justify-content: space-between;
 
-background-color: bisque;
-
-color: black;
-
-font-family: "SansSerif", default, sans-serif;
+padding: 16px 3.5%;
 
 }
 
+.resources{
+
+width: 610px;
+
+margin: 0 auto 20px;
+
+margin-top: 20px;
+
+padding: 6px 13px;
+
+background: yellow;
+
+font: 14px Arial;
+
+text-align: left;
+
+}
+
+.resources span{
+
+display: block;
+
+margin: 4px;
+    
+}
+
+.resources ul{
+
+margin: 0;
+
+padding-left: 22px;
+    
+}
+
+.resources a{
+
+margin-left: 45px; 
+
+color: darkred;
+
+font-weight: bold;
+   
+}
