@@ -1,14 +1,14 @@
 body{
 
-background-color: black;
+background-color: lightgrey;
 
-color: aliceblue;
+color: indigo;
 
 padding: auto;
 
 border-radius: 8px;
 
-font-family: "Comic Sans MS", cursive, sans-serif;
+font-family: "SansSerif", default, sans-serif;
 
 text-align: center;
 
@@ -52,11 +52,19 @@ padding: 10px;
 
 .menus{
 
-background-color: white;
+display: flex;
 
-color: black;
+background-color: lightskyblue;
+
+color: darkred;
+
+padding-left: 120px;
+
+justify-content: center;
+
 
 }
+
 
 .button {
   display: inline-block;
@@ -72,7 +80,7 @@ color: black;
 }
 
 .button span {
-  display: inline;
+  display: inline-block;
   position: relative;
   transition: 0.5s;
 }
@@ -193,9 +201,43 @@ left: 25px;
 
 }
 
+.div_img{
 
+display: flex;
 
+align-items: center;
 
+gap: 275px;
 
+border: 2px, solid, blue; 
 
+background-color: bisque;
+
+color: green;
+
+}
+
+.titulo{
+
+color: black;
+
+font-size: 20px;
+
+}
+
+.div_img_2{
+
+display: flex;
+
+align-items: center;
+
+gap: 72px;
+
+background-color: bisque;
+
+color: black;
+
+font-family: "SansSerif", default, sans-serif;
+
+}
 
