@@ -1,3 +1,69 @@
+header{
+
+background-color: blueviolet;
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: space-between;
+
+}
+
+h1{
+
+background-color: bisque;
+
+}
+
+.imagem{
+
+background-color: crimson;
+
+color: white;
+
+}
+
+nav{
+
+background-color: bisque;
+
+gap: 10px;
+
+display: flex;
+
+justify-content: center;
+
+}
+
+a{
+
+background-color: pink;
+
+}
+
+section{
+
+background-color: chartreuse;
+
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+}
+
+section div{
+
+background-color: crimson;
+
+margin: 10px;
+
+text-align: center;
+
+}
+
 div div{
     background-color: dodgerblue;
     padding: 10px;
