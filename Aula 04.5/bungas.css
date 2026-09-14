@@ -52,6 +52,10 @@ flex-wrap: wrap;
 
 justify-content: center;
 
+height: 350px;
+
+align-content: center;
+
 }
 
 section div{
@@ -61,6 +65,38 @@ background-color: crimson;
 margin: 10px;
 
 text-align: center;
+
+}
+
+#d1{
+
+    order: 1;
+
+    flex-grow: 2;
+
+}
+
+#d2{
+
+    order: 2;
+
+    flex-grow: 1;
+
+}
+
+#d3{
+
+    order: 3;
+
+    flex-basis: 325px;
+
+}
+
+#d4{
+
+    order: 4;
+
+    flex-grow: 5;
 
 }
 
@@ -97,12 +133,3 @@ div div{
     margin: 10px;
 }
 
-#d1{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-#d2{
-    grid-row-start: 2;
-    grid-row-end: 5;
-}
