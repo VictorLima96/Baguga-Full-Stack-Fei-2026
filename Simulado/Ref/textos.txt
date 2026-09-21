@@ -1,0 +1,34 @@
+Marina Costa
+Sobre
+Projetos
+Contato
+Marina Costa
+Desenvolvedora Front-End
+Crio interfaces web rápidas, acessíveis e agradáveis de usar. Nos últimos 4 anos, trabalhei com startups e agências para transformar protótipos em produtos reais.
+Ver projetos
+Entrar em contato
+Sobre mim
+Sou formada em Sistemas de Informação e me especializei em desenvolvimento front-end. Gosto de transformar ideias complexas em telas simples de usar, sempre prestando atenção em performance e acessibilidade. Fora do código, gosto de fotografia e trilhas.
+Habilidades
+HTML5
+CSS3
+JavaScript
+React
+Figma
+Git
+Projetos
+Uma seleção de trabalhos recentes.
+Painel Financeiro
+Painel de controle financeiro com gráficos interativos e modo escuro.
+React
+Chart.js
+App Clima Agora
+Aplicativo de previsão do tempo com busca por cidade e animações suaves.
+JavaScript
+API REST
+Vamos conversar?
+Estou disponível para novos projetos e oportunidades. Me manda uma mensagem!
+marina.costa@email.com
+github.com/marinacosta
+linkedin.com/in/marinacosta
+© 2026 Marina Costa. Todos os direitos reservados.

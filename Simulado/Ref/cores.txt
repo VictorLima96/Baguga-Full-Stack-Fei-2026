@@ -1,0 +1,24 @@
+Paleta de cores — Marina Costa (portfólio)
+
+Cores principais
+  Verde-sálvia (cor primária) .......... #3F6C51
+  Terracota (cor de destaque) ........... #D97757
+  Terracota escuro (texto de tags) ..... #8B4B3A
+
+Texto
+  Texto principal ...................... #2B2A28
+  Texto secundário ...................... #5B564C
+  Texto apagado / notas ................ #8B8578
+
+Fundos
+  Branco .............................. #FFFFFF
+  Bege claro (fundo geral) ............. #FAF7F2
+  Bege (fundo de badges de habilidade) . #EFE7DB
+  Bege claro (fundo de tags de projeto) . #F1EAE3
+  Marrom escuro (fundo do rodapé) ....... #2B2A28
+
+Bordas
+  Bege médio (bordas de navbar/cartões) . #EDE3D3
+
+Texto sobre fundo escuro (rodapé)
+  Bege acinzentado ...................... #C9BDA9
