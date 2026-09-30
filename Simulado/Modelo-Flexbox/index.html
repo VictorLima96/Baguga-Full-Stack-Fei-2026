@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Flexbox - Portfólio Marina Costa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Flex Container: row, space-between, center) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Marina Costa</a>
+            <nav class="nav-menu">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Flex Container: column, center) -->
+    <section class="hero">
+        <div class="hero-container">
+            <img src="imagens/perfil.svg" alt="Marina Costa" class="avatar">
+            <h1>Marina Costa</h1>
+            <p class="cargo">Desenvolvedora Front-End</p>
+            <p class="bio">
+                Crio interfaces web rápidas, acessíveis e agradáveis de usar. Nos últimos 4 anos, trabalhei com startups e agências para transformar protótipos em produtos reais.
+            </p>
+            <div class="botoes-hero">
+                <a href="#projetos" class="btn btn-verde">Ver projetos</a>
+                <a href="#contato" class="btn btn-contorno">Entrar em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE & HABILIDADES (Flex Container: row com 2 colunas) -->
+    <section id="sobre" class="sobre-secao">
+        <div class="sobre-container">
+            <div class="sobre-col">
+                <h2>Sobre mim</h2>
+                <p>
+                    Sou formada em Sistemas de Informação e me especializei em desenvolvimento front-end. Gosto de transformar ideias complexas em telas simples de usar, sempre prestando atenção em performance e acessibilidade. Fora do código, gosto de fotografia e trilhas.
+                </p>
+            </div>
+            <div class="habilidades-col">
+                <h2>Habilidades</h2>
+                <div class="habilidades-flex">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PROJETOS (Flex Container: row com wrap/coluna) -->
+    <section id="projetos" class="projetos-secao">
+        <div class="projetos-container">
+            <h2>Projetos</h2>
+            <p class="subtitulo">Uma seleção de trabalhos recentes.</p>
+
+            <div class="cards-flex">
+                <!-- Card 1 -->
+                <article class="card-projeto">
+                    <img src="imagens/projeto-painel.svg" alt="Painel Financeiro" class="card-img">
+                    <div class="card-info">
+                        <h3>Painel Financeiro</h3>
+                        <p>Painel de controle financeiro com gráficos interativos e modo escuro.</p>
+                        <div class="tags-flex">
+                            <span class="tag-badge">React</span>
+                            <span class="tag-badge">Chart.js</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card-projeto">
+                    <img src="imagens/projeto-clima.svg" alt="App Clima Agora" class="card-img">
+                    <div class="card-info">
+                        <h3>App Clima Agora</h3>
+                        <p>Aplicativo de previsão do tempo com busca por cidade e animações suaves.</p>
+                        <div class="tags-flex">
+                            <span class="tag-badge">JavaScript</span>
+                            <span class="tag-badge">API REST</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ (Flex Container: column, center) -->
+    <footer id="contato" class="footer-secao">
+        <div class="footer-container">
+            <h2>Vamos conversar?</h2>
+            <p class="footer-subtitulo">Estou disponível para novos projetos e oportunidades. Me manda uma mensagem!</p>
+
+            <div class="contatos-flex">
+                <a href="mailto:marina.costa@email.com" class="contato-link">
+                    <img src="imagens/icon-mail.svg" alt="Email" class="icone">
+                    <span>marina.costa@email.com</span>
+                </a>
+                <a href="https://github.com/marinacosta" target="_blank" class="contato-link">
+                    <img src="imagens/icon-github.svg" alt="GitHub" class="icone">
+                    <span>github.com/marinacosta</span>
+                </a>
+                <a href="https://linkedin.com/in/marinacosta" target="_blank" class="contato-link">
+                    <img src="imagens/icon-linkedin.svg" alt="LinkedIn" class="icone">
+                    <span>linkedin.com/in/marinacosta</span>
+                </a>
+            </div>
+
+            <p class="copyright">© 2026 Marina Costa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

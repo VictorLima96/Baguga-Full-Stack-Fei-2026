@@ -1,0 +1,313 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FAF7F2; /* Bege claro (fundo geral) */
+    color: #2B2A28; /* Texto principal */
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #FAF7F2;
+    padding: 24px 0;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2B2A28;
+    text-decoration: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5B564C; /* Texto secundário */
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #2B2A28;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 40px 20px 60px;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #2B2A28;
+    margin-bottom: 8px;
+}
+
+.cargo {
+    color: #D97757; /* Terracota */
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    color: #5B564C;
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primario {
+    background-color: #3F6C51; /* Verde-sálvia */
+    color: #FFFFFF;
+    border: 1px solid #3F6C51;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #2B2A28;
+    border: 1px solid #8B8578;
+}
+
+/* SEÇÃO SOBRE & HABILIDADES */
+.sobre-habilidades {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+}
+
+.sobre-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.sobre-mim {
+    flex: 1;
+}
+
+.sobre-mim h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #2B2A28;
+}
+
+.sobre-mim p {
+    color: #5B564C;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.habilidades {
+    flex: 1;
+}
+
+.habilidades h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #2B2A28;
+}
+
+.tags-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: #EFE7DB; /* Bege (fundo badges) */
+    color: #3F6C51; /* Verde-sálvia / destaque */
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 16px;
+}
+
+/* SEÇÃO PROJETOS */
+.projetos {
+    padding: 70px 20px;
+    background-color: #FAF7F2;
+    text-align: center;
+}
+
+.projetos-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projetos h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #2B2A28;
+}
+
+.subtitulo {
+    color: #5B564C;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #EDE3D3; /* Bege médio */
+    border-radius: 16px;
+    padding: 16px;
+    flex: 1;
+    text-align: left;
+}
+
+.card-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.card-conteudo h3 {
+    font-size: 18px;
+    color: #2B2A28;
+    margin-bottom: 8px;
+}
+
+.card-conteudo p {
+    font-size: 14px;
+    color: #5B564C;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #F1EAE3; /* Bege claro (tags projeto) */
+    color: #8B4B3A; /* Terracota escuro */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #2B2A28; /* Marrom escuro */
+    color: #FFFFFF;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.rodape-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.rodape-subtitulo {
+    color: #C9BDA9; /* Bege acinzentado */
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.item-contato:hover {
+    text-decoration: underline;
+}
+
+.icone {
+    width: 18px;
+    height: 18px;
+    /* Inverte o ícone para branco no fundo escuro caso necessário */
+    filter: brightness(0) invert(1);
+}
+
+.direitos {
+    color: #8B8578; /* Texto apagado */
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE (Conceito do PDF: Flex Responsive / @media) */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+    }
+}

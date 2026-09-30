@@ -1,0 +1,324 @@
+/* ========================================================
+   MODELO FLEXBOX (Guia de Estudo e Prova - Slides 26 a 60)
+   ======================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FAF7F2; /* Bege claro */
+    color: #2B2A28; /* Texto principal */
+}
+
+/* ----------------------------------------------------
+   1. NAVBAR (Flexbox Horizontal)
+   ---------------------------------------------------- */
+.navbar {
+    background-color: #FAF7F2;
+    padding: 24px 0;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Flex container básico */
+    display: flex;
+    flex-direction: row;            /* Padrão: linha da esquerda para a direita */
+    justify-content: space-between; /* Distribui itens nas extremidades */
+    align-items: center;            /* Alinhamento vertical centralizado */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2B2A28;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 24px; /* Espaçamento entre os links */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5B564C;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: #2B2A28;
+}
+
+/* ----------------------------------------------------
+   2. HERO / APRESENTAÇÃO (Flexbox Vertical em Coluna)
+   ---------------------------------------------------- */
+.hero {
+    padding: 40px 20px 60px;
+}
+
+.hero-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;         /* Itens empilhados verticalmente */
+    align-items: center;            /* Centraliza horizontalmente no eixo transversal */
+    text-align: center;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.cargo {
+    color: #D97757; /* Terracota */
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.bio {
+    color: #5B564C;
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.botoes-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-verde {
+    background-color: #3F6C51; /* Verde-sálvia */
+    color: #FFFFFF;
+    border: 1px solid #3F6C51;
+}
+
+.btn-contorno {
+    background-color: transparent;
+    color: #2B2A28;
+    border: 1px solid #8B8578;
+}
+
+/* ----------------------------------------------------
+   3. SEÇÃO SOBRE & HABILIDADES (Flexbox 2 Colunas)
+   ---------------------------------------------------- */
+.sobre-secao {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+}
+
+.sobre-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.sobre-col {
+    flex: 1; /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+}
+
+.sobre-col h2, .habilidades-col h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.sobre-col p {
+    color: #5B564C;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.habilidades-col {
+    flex: 1;
+}
+
+.habilidades-flex {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha nas tags */
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #EFE7DB;
+    color: #3F6C51;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 16px;
+}
+
+/* ----------------------------------------------------
+   4. SEÇÃO PROJETOS (Flexbox Cards lado a lado)
+   ---------------------------------------------------- */
+.projetos-secao {
+    padding: 70px 20px;
+    background-color: #FAF7F2;
+    text-align: center;
+}
+
+.projetos-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projetos-container h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #5B564C;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.cards-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-projeto {
+    flex: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #EDE3D3;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: left;
+}
+
+.card-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.card-info h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #5B564C;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.tags-flex {
+    display: flex;
+    gap: 8px;
+}
+
+.tag-badge {
+    background-color: #F1EAE3;
+    color: #8B4B3A;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+/* ----------------------------------------------------
+   5. RODAPÉ (Flexbox Centralizado)
+   ---------------------------------------------------- */
+.footer-secao {
+    background-color: #2B2A28;
+    color: #FFFFFF;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-subtitulo {
+    color: #C9BDA9;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contatos-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.contato-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contato-link:hover {
+    text-decoration: underline;
+}
+
+.icone {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.copyright {
+    color: #8B8578;
+    font-size: 12px;
+}
+
+/* ----------------------------------------------------
+   6. RESPONSIVIDADE COM FLEXBOX (Slide 60)
+   ---------------------------------------------------- */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Muda de linha para coluna no mobile */
+        gap: 30px;
+    }
+
+    .cards-flex {
+        flex-direction: column;
+    }
+}
