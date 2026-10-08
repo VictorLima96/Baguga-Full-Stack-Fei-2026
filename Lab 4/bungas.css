@@ -1,0 +1,72 @@
+body{
+
+background-color: black;
+
+color: aliceblue;
+
+padding: auto;
+
+border-radius: 8px;
+
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+text-align: center;
+
+}
+
+img{
+
+animation: girar 2s linear infinite;
+
+}
+
+@keyframes girar{
+
+from{transform: rotate(0deg);}
+
+to{transform: rotate(360deg);}
+
+}
+
+div div{
+    background-color: dodgerblue;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.topo{
+    background-color: bisque;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 200px 400px 200px;
+    gap: 10px 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.sessao{
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 20px;
+    margin: 10px;
+}
+
+#d1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#d2{
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
