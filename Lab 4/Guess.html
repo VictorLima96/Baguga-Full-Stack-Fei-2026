@@ -1,43 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-
-Advinhação
-
-</title>
-
-<link rel="icon" type="image/x-icon" href="OIP.jpg">
-
-<link rel="stylesheet" href="bungas.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhação — Lab 4</title>
+    <link rel="stylesheet" href="bungas.css">
+    <script src="bligs.js" defer></script>
 </head>
-    <body>
-
-        <br>
-        
-        <img src="OIP.jpg" alt="cat" width="67" height="67">
-
-    </br>
-
-       <br>
-        
-        <input type="number" id="Number">
-        
-        </br>
-
-        <br>
-        
-        <input type="button" value="Crica meu fi" id="butao" onclick="imprimir();">
-        
-        </br>
-
-    </body>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">Victor Lima <span>• Cayru</span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="../index.html">Início</a><a href="../projects.html">Projetos</a><a href="Guess.html" aria-current="page">Adivinhação</a>
+        </nav>
+    </header>
+    <main class="page-width app-page">
+        <p class="eyebrow">Lab 4 • JavaScript</p>
+        <section class="app-panel guess-panel" id="guess-panel" aria-labelledby="page-title">
+            <img src="OIP.jpg" alt="Imagem do exercício" class="profile-image spin-image" width="110" height="110">
+            <h1 id="page-title">Adivinhe o número</h1>
+            <p>Escolhi um número inteiro de 0 a 99. Digite seu palpite e tente acertar.</p>
+            <form class="guess-form" id="guess-form">
+                <label class="visually-hidden" for="guess-input">Seu palpite, de 0 a 99</label>
+                <input id="guess-input" name="guess" type="number" min="0" max="99" step="1" required autocomplete="off" placeholder="0 a 99">
+                <button type="submit">Conferir</button>
+            </form>
+            <p class="guess-feedback" id="guess-feedback" role="status" aria-live="polite">Boa sorte!</p>
+            <button class="button button-outline" id="new-game" type="button">Novo jogo</button>
+        </section>
+    </main>
+    <footer class="site-footer"><p>© 2026 Victor Lima</p><a href="../projects.html">Voltar aos projetos</a></footer>
+</body>
 </html>

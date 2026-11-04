@@ -1,149 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-      let canvas = document.getElementById('canvas');
-     
-      let ctx = canvas.getContext('2d');
-         
-              // test line
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'blue';
-              ctx.strokeStyle = 'red';
-              ctx.moveTo(200,150);
-              ctx.lineTo(60,10);
-              ctx.lineTo(60,250);
-              ctx.lineTo(200,250);
-              ctx.lineTo(200,150);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // retângulos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'grey';
-              ctx.strokeStyle = 'white';
-              ctx.fillRect(10,10,50,50);
-              ctx.strokeRect(10,10,50,50);
-              ctx.closePath();
-          
-              // arcos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'lightblue';
-              ctx.strokeStyle = 'brown';
-              ctx.arc(200,200,50,1.5*Math.PI,2.5*Math.PI);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // texto
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'pink';
-              ctx.strokeStyle = 'purple';
-              ctx.font = "90px Arial"
-              ctx.textAlign = "center";
-              ctx.fillText("Boglis",200,350);
-              ctx.strokeText("Boglis",200,350)
-              ctx.closePath();
-});
+const paletas = [
+      { forma: 'blue', linha: 'red', arco: 'lightblue', contorno: 'brown' },
+      { forma: 'green', linha: 'lime', arco: 'lightblue', contorno: 'blue' },
+      { forma: 'green', linha: 'lime', arco: 'lightblue', contorno: 'blue' }
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-      let canvas2 = document.getElementById('canvas2');
-     
-      let ctx = canvas2.getContext('2d');
-         
-              // test line
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'green';
-              ctx.strokeStyle = 'lime';
-              ctx.moveTo(200,150);
-              ctx.lineTo(60,10);
-              ctx.lineTo(60,250);
-              ctx.lineTo(200,250);
-              ctx.lineTo(200,150);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // retângulos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'grey';
-              ctx.strokeStyle = 'white';
-              ctx.fillRect(10,10,50,50);
-              ctx.strokeRect(10,10,50,50);
-              ctx.closePath();
-          
-              // arcos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'lightblue';
-              ctx.strokeStyle = 'blue';
-              ctx.arc(200,200,50,1.5*Math.PI,2.5*Math.PI);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // texto
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'pink';
-              ctx.strokeStyle = 'purple';
-              ctx.font = "90px Arial"
-              ctx.textAlign = "center";
-              ctx.fillText("Boglis",200,350);
-              ctx.strokeText("Boglis",200,350)
-              ctx.closePath();
-});
+function desenharExemplo(canvas, cores) {
+      const contexto = canvas.getContext('2d');
+      contexto.clearRect(0, 0, canvas.width, canvas.height);
 
-document.addEventListener('DOMContentLoaded', function() {
-      let canvas3 = document.getElementById('canvas3');
-     
-      let ctx = canvas3.getContext('2d');
-         
-              // test line
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'green';
-              ctx.strokeStyle = 'lime';
-              ctx.moveTo(200,150);
-              ctx.lineTo(60,10);
-              ctx.lineTo(60,250);
-              ctx.lineTo(200,250);
-              ctx.lineTo(200,150);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // retângulos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'grey';
-              ctx.strokeStyle = 'white';
-              ctx.fillRect(10,10,50,50);
-              ctx.strokeRect(10,10,50,50);
-              ctx.closePath();
-          
-              // arcos
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'lightblue';
-              ctx.strokeStyle = 'blue';
-              ctx.arc(200,200,50,1.5*Math.PI,2.5*Math.PI);
-              ctx.fill();
-              ctx.stroke();
-              ctx.closePath();
-          
-              // texto
-              ctx.beginPath();
-              ctx.lineWidth = 2;
-              ctx.fillStyle = 'pink';
-              ctx.strokeStyle = 'purple';
-              ctx.font = "90px Arial"
-              ctx.textAlign = "center";
-              ctx.fillText("Boglis",200,350);
-              ctx.strokeText("Boglis",200,350)
-              ctx.closePath();
+      contexto.beginPath();
+      contexto.moveTo(200, 150);
+      contexto.lineTo(60, 10);
+      contexto.lineTo(60, 250);
+      contexto.lineTo(200, 250);
+      contexto.closePath();
+      contexto.fillStyle = cores.forma;
+      contexto.strokeStyle = cores.linha;
+      contexto.lineWidth = 2;
+      contexto.fill();
+      contexto.stroke();
+
+      contexto.fillStyle = 'grey';
+      contexto.strokeStyle = 'white';
+      contexto.fillRect(10, 10, 50, 50);
+      contexto.strokeRect(10, 10, 50, 50);
+
+      contexto.beginPath();
+      contexto.arc(200, 200, 50, 1.5 * Math.PI, 2.5 * Math.PI);
+      contexto.fillStyle = cores.arco;
+      contexto.strokeStyle = cores.contorno;
+      contexto.fill();
+      contexto.stroke();
+
+      contexto.font = '44px Arial';
+      contexto.textAlign = 'center';
+      contexto.fillStyle = 'pink';
+      contexto.strokeStyle = 'purple';
+      contexto.fillText('Boglis', 200, 350);
+      contexto.strokeText('Boglis', 200, 350);
+}
+
+document.querySelectorAll('canvas').forEach((canvas, indice) => {
+      desenharExemplo(canvas, paletas[indice] || paletas[0]);
 });

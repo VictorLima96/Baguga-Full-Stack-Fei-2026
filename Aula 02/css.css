@@ -4,6 +4,10 @@ background-color: black;
 
 text-align: center;
 
+margin: 0;
+
+padding: 24px;
+
 }
 
 h1{
@@ -31,6 +35,16 @@ font-family: "Comic Sans MS", cursive, "sans-serif";
 background-color: white;
 
 color: black;
+
+display: inline-block;
+
+padding: 8px 14px;
+
+margin: 4px;
+
+border-radius: 6px;
+
+text-decoration: none;
 
 }
 
@@ -72,9 +86,17 @@ color: firebrick;
 
 }
 
+.menus:hover{
+
+background-color: chartreuse;
+
+}
+
 .cube {
 
-align-content: center;
+margin: 80px auto;
+
+perspective: 800px;
 
 width: 200px;
 

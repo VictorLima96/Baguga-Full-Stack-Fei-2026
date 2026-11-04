@@ -1,0 +1,13 @@
+{
+  "name": "baguga-portfolio-fei",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio acadêmico com Express para os Labs de desenvolvimento web.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

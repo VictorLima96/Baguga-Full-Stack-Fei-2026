@@ -1,46 +1,42 @@
-<script type="text/javascript"></script>
+const output = document.getElementById('output');
+const valueInput = document.getElementById('value-input');
 
-let x = "67.67";
-
-    x = parseInt(x);
-
-    let y = "67.67";
-
-    y = parseFloat(y);
-
-    let text = "sabugão";
-
-    text = String(text);
-
-    let entrada = prompt("Dado: ");
-            
-    if (condition) {
-        
+function executarExemplos() {
+    const valor = Number(valueInput.value);
+    if (valueInput.value.trim() === '' || !Number.isFinite(valor)) {
+        output.textContent = 'Digite um número válido para ver os exemplos.';
+        return;
     }
 
-    else if (condition) {
-        
+    const inteiro = parseInt(String(valor), 10);
+    const decimal = parseFloat(String(valor));
+    const linhasWhile = [];
+    let contador = 0;
+    while (contador < 5) {
+        linhasWhile.push(contador);
+        contador += 1;
     }
 
-    else{
-
-
-
+    const linhasFor = [];
+    for (let indice = 0; indice < 5; indice += 1) {
+        linhasFor.push(indice);
     }
 
-    let i = 0;
+    const comparacao = valor > 10
+        ? 'O número é maior que 10.'
+        : valor < 10
+            ? 'O número é menor que 10.'
+            : 'O número é igual a 10.';
 
-    while(i<10) {
-        
-        window.alert(i);
+    output.textContent = [
+        `parseInt: ${inteiro}`,
+        `parseFloat: ${decimal}`,
+        `String: ${String(valor)}`,
+        comparacao,
+        `while: ${linhasWhile.join(', ')}`,
+        `for: ${linhasFor.join(', ')}`
+    ].join('\n');
+}
 
-        i++;
-
-    }
-
-    for (let i = 0; i <10; i++){
-        
-    window.alert(i);
-    
-    }
+document.getElementById('run-examples').addEventListener('click', executarExemplos);
 

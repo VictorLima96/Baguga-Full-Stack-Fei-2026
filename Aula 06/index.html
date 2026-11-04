@@ -1,93 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-
-Aula 6
-
-</title>
-
-<link rel="icon" type="image/x-icon" href="OIP.jpg">
-
-<link rel="stylesheet" href="bungas.css">
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 6 — DOM e funções</title>
+        <link rel="stylesheet" href="bungas.css">
+        <script src="bligs.js" defer></script>
 </head>
-    <body>
+<body>
+        <main class="lesson-card">
+                <p class="eyebrow">Aula 06 • JavaScript</p>
+                <h1>DOM, entradas e funções</h1>
 
-        <h1>Aula 6</h1>
+                <section>
+                        <h2>Capturando um texto</h2>
+                        <label for="text">Escreva algo</label>
+                        <div class="lesson-controls">
+                                <input type="text" id="text">
+                                <button type="button" id="print-text">Mostrar texto</button>
+                        </div>
+                        <p id="spanito" aria-live="polite">O texto aparecerá aqui.</p>
+                </section>
 
-        <h2>Exemplo e insenção de informação</h2>
+                <section>
+                        <h2>Tipos de input</h2>
+                        <div class="input-examples">
+                                <label>Texto <input type="text" aria-label="Exemplo de texto"></label>
+                                <label>Número <input type="number" aria-label="Exemplo de número"></label>
+                                <label>Senha <input type="password" aria-label="Exemplo de senha"></label>
+                                <label>Data <input type="date" aria-label="Exemplo de data"></label>
+                                <label class="check-label"><input type="checkbox"> Marcar opção</label>
+                        </div>
+                </section>
 
-        <span id="nome">Meu nome</span>
+                <section>
+                        <h2>Exercício 1 — ano de nascimento</h2>
+                        <label for="ex1_nome">Nome</label>
+                        <input type="text" id="ex1_nome">
+                        <label for="ex1_idade">Idade</label>
+                        <input type="number" id="ex1_idade" min="0" max="130">
+                        <button type="button" id="run-ex1">Calcular</button>
+                        <p id="r1" aria-live="polite"></p>
+                </section>
 
-        <h2>Exemplos de Input do html</h2>
+                <section>
+                        <h2>Exercício 2 — contagem</h2>
+                        <label for="ex2_num">Conte de zero até</label>
+                        <input type="number" id="ex2_num" min="0" max="100">
+                        <button type="button" id="run-ex2">Contar</button>
+                        <p id="r2" aria-live="polite"></p>
+                </section>
 
-        <br>
-        
-        <input type="text" id="text">
-        
-    </br>
-
-        <br>
-        
-        <input type="number" id="number">
-        
-</br>
-
-        <br>
-        
-        <input type="password" id="password">
-        
-</br>
-
-        <br>
-        
-        <input type="date" id="data">
-        
-</br>
-
-        <br>
-        
-        <input type="checkbox" id="checa">
-        
-</br>
-
-        <br>
-        
-        <input type="button" value="crica meu fi" id="butao" onclick="imprimir();">
-        
-</br>
-
-        <span id="spanito"></span>
-
-        <h2>Exercícios</h2>
-
-        <h3>Exemplo 1</h3>
-
-        <p>Nome: <input type="text" id="ex1_nome"></p>
-
-        <p>Idade: <input type="number" id="ex1_idade"></p>
-
-        <input type="button" value="Calcular ano de nascimento." onclick="ex1();">
-
-        <span id="r1"></span>
-
-        <h3>Exemplo 2</h3>
-
-         <p>Bora digitar <input type="number" id="ex2_num"></p>
-
-        <input type="button" value="quero ver" onclick="ex2();">
-
-        <span id="r2"></span>
-
-        <script type="text/javascript" src="bligs.js"></script>
-
-    </body>
+                <a href="../index.html">Voltar ao portfólio</a>
+        </main>
+</body>
 </html>

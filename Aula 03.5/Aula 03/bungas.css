@@ -1,197 +1,45 @@
-body{
-
-background-color: black;
-
-color: aliceblue;
-
-padding: auto;
-
-border-radius: 8px;
-
-font-family: "Comic Sans MS", cursive, sans-serif;
-
-text-align: center;
-
-}
-
-img{
-
-animation: girar 2s linear infinite;
-
-}
-
-@keyframes girar{
-
-from{transform: rotate(0deg);}
-
-to{transform: rotate(360deg);}
-
-}
-
-table{
-
-border-collapse: collapse;
-
-margin: auto;
-
-width: 60%;
-
-max-width: 600px;
-
-color: aliceblue;
-
-}
-
-th, td{
-
-border: 1px solid aliceblue;
-
-padding: 10px;
-
-}
-
-.menus{
-
-background-color: white;
-
-color: black;
-
-}
-
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #4b4543;
-  border: none;
-  color: #FFFFFF;
+body {
+  margin: 0;
+  padding: 24px;
+  background: #080808;
+  color: aliceblue;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 200px;
-  cursor: pointer;
 }
 
-.button span {
-  display: inline;
-  position: relative;
-  transition: 0.5s;
+.menus {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: white;
+  color: black;
+  text-decoration: none;
 }
 
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+.menus:hover { background: chartreuse; }
+img { max-width: 100%; height: auto; animation: girar 12s linear infinite; }
+iframe { max-width: 100%; border: 0; }
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { img { animation: none; } }
 
-.button:hover span {
-  padding-right: 25px;
-}
+.h2 { background: white; color: black; }
+.div { display: inline-grid; place-items: center; width: 30px; height: 30px; margin: 10px; padding: 5px; }
+.solida { border: 2px solid white; }
+.pontilhada { border: 2px dotted black; }
+.traced { border: 2px dashed black; }
+.dupla { border: 5px double black; }
+.arredon { border-radius: 10px; box-shadow: 2px 4px gray; }
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+.bg_div1, .bg_div2, .bg_div3 { position: fixed; z-index: 2; }
+.bg_div1 { top: 50px; left: 25px; background: red; }
+.bg_div2 { top: 100px; right: 25px; background: blue; }
+.bg_div3 { bottom: 25px; left: 25px; background: green; }
 
-.h2{
-
-background-color: white;
-
-color: black;
-
-}
-
-.div{
-  
-margin: 10px;
-
-padding: 5px;
-
-width: 20px;
-
-height: 20px;
-
-}
-
-.dive{
-
-margin: 100px;
-
-padding: 10px;
-
-width: 20px;
-
-
-}
-
-.solida{
-
-border: 2px, solid, white; 
-  
-}
-
-.pontilhada{
-
-border: 2px, dotted, black;
-
-}
-
-.traced{
-
-border: 2px, dashed, black;
-
-}
-
-.dupla{
-
-border: 5px, double, black;
-
-}
-
-.arredon{
-
-border-radius: 10px;
-
-box-shadow: 2px 4px gray;
-
-}
-
-.bg_div1{
-
-background-color: red;
-
-position: absolute;
-
-top: 50px;
-
-left: 25px;
-
-}
-
-.bg_div2{
-
-background-color: blue;
-
-position: relative;
-
-top: 50px;
-
-right: 25px;
-  
-}
-
-.bg_div3{
-
-background-color: green;
-
-position: fixed;
-
-bottom: 50px;
-
-left: 25px;
-
-}
+.dive { margin: 40px auto; }
+.button { padding: 14px 20px; border: 0; border-radius: 6px; background: #4b4543; color: white; font: inherit; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.button:hover { background: #625a57; }
+.button:active { transform: scale(.99); }
 
 
 
