@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Kniggles</title>
+    <!-- Conecta o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="bungas.css">
+</head>
+<body>
+
+<div id="jogo">
+
+    <!-- O palco serve para centralizar a arena e ajusta-la em telas menores -->
+    <div id="palco">
+        <div id="arena">
+
+            <!-- Placar de bligs coletados -->
+            <div id="placar">
+                <span class="icone"></span>
+                <span id="pontos">0</span>
+                <span class="rotulo">bligs</span>
+            </div>
+
+            <!-- Container dos bligs (o JS cria cada um) -->
+            <div id="bligs"></div>
+
+            <!-- O Kniggles: a div externa posiciona, a interna e o sprite -->
+            <div id="kniggles">
+                <div id="kniggles-arte"></div>
+            </div>
+
+            <!-- Avisos -->
+            <div id="inicio">Aperte uma tecla para comecar</div>
+            <div id="fim" class="escondido">
+                Todos os bligs coletados! <em>[R] para recomecar</em>
+            </div>
+
+        </div>
+    </div>
+
+    <p id="controles">
+        <b>&larr;</b> <b>&rarr;</b> ou <b>A</b> <b>D</b> andar &nbsp;&bull;&nbsp;
+        <b>&uarr;</b> ou <b>W</b> ou <b>Espaco</b> pular &nbsp;&bull;&nbsp;
+        <b>&darr;</b> ou <b>S</b> cair mais rapido
+    </p>
+
+</div>
+
+<!-- Conecta o arquivo de logica JavaScript (src, nunca href!) -->
+<script src="bligs.js"></script>
+</body>
+</html>

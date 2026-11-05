@@ -1,0 +1,189 @@
+/* ============================================================
+   Jogo do Kniggles - estilos
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 0%, #2c3548 0%, #14161d 70%);
+    color: #e8ecf5;
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    overflow: hidden;
+}
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+/* --- palco: segura a arena e permite reducer a escala da tela --- */
+#palco {
+    position: relative;
+}
+
+#arena {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #43527a 0%, #6b7fa2 55%, #93a8c4 100%);
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, .55),
+        inset 0 0 0 3px rgba(255, 255, 255, .07);
+    transform-origin: top left;
+}
+
+/* --- plataformas --- */
+.plataforma {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, #c08c55 0%, #9a6a3a 55%, #7b532c 100%);
+    border-radius: 9px 9px 5px 5px;
+    box-shadow: 0 7px 0 #523720, 0 12px 18px rgba(0, 0, 0, .35);
+}
+
+/* --- chao --- */
+#chao {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 44px;
+    background: linear-gradient(180deg, #7fa355 0%, #5c7a3c 55%, #43602c 100%);
+    border-radius: 0;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, .25);
+}
+
+/* --- kniggles --- */
+#kniggles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    will-change: transform;
+}
+
+#kniggles-arte {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform-origin: 50% 100%;
+    will-change: transform;
+}
+
+/* --- bligs (itens para coletar) --- */
+#bligs {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bling {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin-left: -13px;
+    margin-top: -13px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #ffffff 0%, #ff6a86 45%, #b3123c 100%);
+    box-shadow: 0 0 16px rgba(255, 106, 134, .85);
+    animation: pulsar 1.1s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-8px) scale(1.1); }
+}
+
+/* --- placar --- */
+#placar {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(12, 16, 26, .55);
+    border: 2px solid rgba(255, 255, 255, .14);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#placar .icone {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #fff, #ff6a86 50%, #b3123c);
+}
+
+#placar .rotulo {
+    font-weight: normal;
+    opacity: .65;
+    font-size: 13px;
+    text-transform: lowercase;
+}
+
+/* --- avisos --- */
+#inicio,
+#fim {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(10, 13, 20, .72);
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#inicio.escondido {
+    display: none;
+}
+
+#fim.escondido {
+    display: none;
+}
+
+#fim em {
+    font-size: 16px;
+    font-style: normal;
+    opacity: .7;
+}
+
+/* --- controles --- */
+#controles {
+    margin: 0;
+    font-size: 14px;
+    opacity: .75;
+    text-align: center;
+}
+
+#controles b {
+    display: inline-block;
+    min-width: 22px;
+    padding: 2px 6px;
+    margin: 0 1px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .18);
+}
