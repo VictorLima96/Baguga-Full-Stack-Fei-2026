@@ -10,8 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "color": "^5.0.3",
-    "ejs": "^7.0.2",
     "express": "^5.3.0"
   }
 }
