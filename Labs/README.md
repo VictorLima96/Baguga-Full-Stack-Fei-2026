@@ -1,10 +1,10 @@
-# Portfólio - Victor Lima
+# Labs - Victor Lima
 
-Site dos Labs de desenvolvimento web da FEI (2026). O servidor e as páginas do site ficam nesta pasta `Portfolio`. As pastas `Aula ...` continuam na raiz do repositório como material de estudo, e o site também consegue abrir essas páginas.
+Site dos Labs de desenvolvimento web da FEI (2026). O servidor e as páginas do site ficam nesta pasta `Labs`. As aulas estão em `../Aulas` e os projetos extras em `../Extras`.
 
 ## Como rodar
 
-1. Abra o terminal na pasta `Portfolio`.
+1. Abra o terminal na pasta `Labs`.
 2. Rode `npm install` uma vez para baixar o Express e o EJS.
 3. Rode `npm start`.
 4. Abra `http://localhost/` no navegador.
@@ -36,14 +36,24 @@ O servidor escuta em `0.0.0.0`, então aceita conexões da rede. Se não abrir, 
 | `/cadastra` | `Cadastro.html` |
 | `/login` | `Login.html` |
 
-As aulas também ficam disponíveis em `/aulas/aula-01/`, `/aulas/aula-02/` e assim por diante. Os simulados ficam em `/simulado/flexbox/`, `/simulado/grid/` e `/simulado/meu-fazido/`. O jogo extra fica em `/extras/jogo-kniggles/`.
+As aulas também ficam disponíveis em `/aulas/aula-01/`, `/aulas/aula-02/` e assim por diante, usando os arquivos da pasta `Aulas`. Os simulados ficam em `/simulado/flexbox/`, `/simulado/grid/` e `/simulado/meu-fazido/`. O jogo extra fica em `/extras/jogo-kniggles/`.
 
-## Labs e Aulas
+## O que é entrega e o que é estudo
 
-- **Labs**: entregas que valem nota (`Lab 1` até `Lab 8`). As páginas do site estão em `Portfolio/public`.
-- **Aulas**: exercícios feitos em sala (`Aula 01` até `Aula 09`). Ficam nas pastas da raiz e são abertos pelo menu de projetos do site.
+- **Labs (esta pasta)**: entregas que valem nota, do `Lab 1` ao `Lab 8`. As páginas do site estão em `Labs/public`.
+- **Aulas (pasta `Aulas`)**: exercícios feitos em sala, do `Aula 01` ao `Aula 09`.
+- **Extras (pasta `Extras`)**: simulados e o jogo do Kniggles, que não são Labs.
+- **Referências (pasta `Labs/Referencias`)**: arquivos originais do Lab 3 (`info.txt` e `referencia.jpeg`) e do Lab 4.
 
 A tabela de `projects.html` tem uma parte só para os Labs e outra só para as Aulas, para não misturar as entregas com os exercícios de sala.
+
+## Entrega no Moodle
+
+Como o site é cumulativo, todas as páginas dos Labs ficam juntas no servidor. Por isso a entrega é a pasta `Labs`, e não uma pasta separada para cada Lab. O link para enviar no Moodle é:
+
+```text
+https://github.com/VictorLima96/Baguga-Full-Stack-Fei-2026/tree/main/Labs
+```
 
 ## Checklist dos requisitos
 
@@ -70,6 +80,7 @@ A tabela de `projects.html` tem uma parte só para os Labs e outra só para as A
 - [x] Linha "Copiando um modelo" na tabela.
 - [x] Página `copy.html` com o conteúdo do `info.txt`.
 - [x] Fundo, fontes, cores e posicionamento seguindo a `referencia.jpeg`.
+- [x] Arquivos originais guardados em `Referencias/Lab 3`.
 
 ### Lab 4 - Adivinhação
 

@@ -93,21 +93,21 @@ app.post("/login", function (req, res) {
 
 app.use(express.static(publicRoot));
 
-app.use("/aulas/aula-01", express.static(path.join(repoRoot, "Aula 01")));
-app.use("/aulas/aula-02", express.static(path.join(repoRoot, "Aula 02")));
-app.use("/aulas/aula-03", express.static(path.join(repoRoot, "Aula 03")));
-app.use("/aulas/aula-03-5", express.static(path.join(repoRoot, "Aula 03.5", "Aula 03")));
-app.use("/aulas/aula-04", express.static(path.join(repoRoot, "Aula 04")));
-app.use("/aulas/aula-05", express.static(path.join(repoRoot, "Aula 05")));
-app.use("/aulas/aula-06", express.static(path.join(repoRoot, "Aula 06")));
-app.use("/aulas/aula-07", express.static(path.join(repoRoot, "Aula 07")));
-app.use("/aulas/aula-08", express.static(path.join(repoRoot, "Aula 08")));
-app.use("/aulas/aula-09", express.static(path.join(repoRoot, "Aula 09")));
+app.use("/aulas/aula-01", express.static(path.join(repoRoot, "Aulas", "Aula 01")));
+app.use("/aulas/aula-02", express.static(path.join(repoRoot, "Aulas", "Aula 02")));
+app.use("/aulas/aula-03", express.static(path.join(repoRoot, "Aulas", "Aula 03")));
+app.use("/aulas/aula-03-5", express.static(path.join(repoRoot, "Aulas", "Aula 03.5", "Aula 03")));
+app.use("/aulas/aula-04", express.static(path.join(repoRoot, "Aulas", "Aula 04")));
+app.use("/aulas/aula-05", express.static(path.join(repoRoot, "Aulas", "Aula 05")));
+app.use("/aulas/aula-06", express.static(path.join(repoRoot, "Aulas", "Aula 06")));
+app.use("/aulas/aula-07", express.static(path.join(repoRoot, "Aulas", "Aula 07")));
+app.use("/aulas/aula-08", express.static(path.join(repoRoot, "Aulas", "Aula 08")));
+app.use("/aulas/aula-09", express.static(path.join(repoRoot, "Aulas", "Aula 09")));
 
-app.use("/simulado/flexbox", express.static(path.join(repoRoot, "Simulado", "Modelo-Flexbox")));
-app.use("/simulado/grid", express.static(path.join(repoRoot, "Simulado", "Modelo-Grid")));
-app.use("/simulado/meu-fazido", express.static(path.join(repoRoot, "Simulado", "Meu fazido")));
-app.use("/extras/jogo-kniggles", express.static(path.join(repoRoot, "testo")));
+app.use("/simulado/flexbox", express.static(path.join(repoRoot, "Extras", "Simulado", "Modelo-Flexbox")));
+app.use("/simulado/grid", express.static(path.join(repoRoot, "Extras", "Simulado", "Modelo-Grid")));
+app.use("/simulado/meu-fazido", express.static(path.join(repoRoot, "Extras", "Simulado", "Meu fazido")));
+app.use("/extras/jogo-kniggles", express.static(path.join(repoRoot, "Extras", "testo")));
 
 app.use(function (req, res) {
   res.status(404).send('Página não encontrada. <a href="/Project.html">Ver projetos</a>');
