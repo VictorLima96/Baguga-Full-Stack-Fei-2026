@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resposta do Servidor</title>
+<link rel="stylesheet" href="/bungas.css">
+</head>
+<body>
+
+<nav class="menu">
+  <a class="menus" href="/Home.html">Home</a>
+  <a class="menus" href="/Project.html">Projetos</a>
+  <a class="menus" href="/cadastra">Cadastro</a>
+  <a class="menus" href="/login">Login</a>
+</nav>
+
+<main class="caixa">
+  <h1>Resposta do Servidor</h1>
+
+  <h2><%= status %></h2>
+
+  <p><%= mensagem %></p>
+
+  <% if (nome !== "") { %>
+    <p>Usuário: <strong><%= nome %></strong></p>
+  <% } %>
+
+  <p><a href="/Project.html">Voltar aos projetos</a></p>
+  <p><a href="/login">Ir para o login</a></p>
+</main>
+
+</body>
+</html>

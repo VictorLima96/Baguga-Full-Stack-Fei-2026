@@ -2,12 +2,13 @@
   "name": "baguga-portfolio-fei",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfólio acadêmico com Express para os Labs de desenvolvimento web.",
+  "description": "Portfólio dos Labs de desenvolvimento web - FEI 2026",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
 }

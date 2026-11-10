@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adivinhação | Victor Lima</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/guess.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Lima - Adivinhação</title>
+<link rel="icon" type="image/x-icon" href="assets/OIP.jpg">
+<link rel="stylesheet" href="bungas.css">
+<script src="js/guess.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">Victor Lima <span>• Cayru</span></a>
-    <nav class="main-nav" aria-label="Navegação principal">
-      <a href="index.html">Início</a><a href="projects.html">Projetos</a>
-    </nav>
-  </header>
-  <main class="page-width app-page">
-    <p class="eyebrow">Lab 4 • JavaScript</p>
-    <section class="app-panel guess-panel" id="guess-panel" aria-labelledby="page-title">
-      <img src="assets/guess-cat.jpg" alt="Gatinho ilustrado" class="profile-image spin-image" width="110" height="110">
-      <h1 id="page-title">Adivinhe o número</h1>
-      <p>Escolhi um número inteiro de 0 a 99. Digite seu palpite e tente acertar.</p>
-      <form class="guess-form" id="guess-form">
-        <label class="visually-hidden" for="guess-input">Seu palpite, de 0 a 99</label>
-        <input id="guess-input" name="guess" type="number" min="0" max="99" step="1" inputmode="numeric" required autocomplete="off" placeholder="0 a 99">
-        <button type="submit">Conferir</button>
-      </form>
-      <p class="guess-feedback" id="guess-feedback" role="status" aria-live="polite">Boa sorte!</p>
-      <button class="button button-outline" id="new-game" type="button">Novo jogo</button>
-    </section>
-  </main>
-  <footer class="site-footer"><p>© 2026 Victor Lima</p><a href="projects.html">Voltar aos projetos</a></footer>
+
+<nav class="menu">
+  <a class="menus" href="index.html">Home</a>
+  <a class="menus" href="projects.html">Projetos</a>
+  <a class="menus" href="copy.html">Copiando um modelo</a>
+  <a class="menus" href="guess.html">Adivinhação</a>
+  <a class="menus" href="Canvas.html">Canvas</a>
+  <a class="menus" href="Animation.html">Animação</a>
+  <a class="menus" href="Cadastro.html">Cadastro</a>
+  <a class="menus" href="Login.html">Login</a>
+</nav>
+
+<main class="caixa" id="painel">
+  <img class="girar" src="assets/guess-cat.jpg" alt="Gatinho do jogo">
+
+  <h1>Adivinhação</h1>
+
+  <p>Eu sorteei um número inteiro de 0 a 99. Digite um palpite para tentar acertar.</p>
+
+  <input type="number" id="palpite" min="0" max="99" placeholder="0 a 99">
+
+  <button id="botao-chutar">Chutar</button>
+
+  <p id="mensagem">Boa sorte!</p>
+
+  <p>Tentativas: <span id="tentativas">0</span></p>
+
+  <button id="botao-novo">Novo jogo</button>
+</main>
+
+<div class="rodape">
+  <p><a href="projects.html">Voltar aos projetos</a></p>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,314 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: black;
+  color: aliceblue;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+a {
+  color: lightskyblue;
+}
+
+a:hover {
+  color: chartreuse;
+}
+
+img {
+  max-width: 100%;
+}
+
+.menu {
+  margin: 20px auto;
+}
+
+.menus {
+  display: inline-block;
+  margin: 4px;
+  padding: 6px 10px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.menus:hover {
+  background-color: chartreuse;
+  color: black;
+}
+
+.girar {
+  animation: girar 3s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.topo {
+  padding: 20px;
+  border: 1px solid aliceblue;
+}
+
+.lista {
+  display: inline-block;
+  text-align: left;
+}
+
+.galeria img {
+  width: 140px;
+  height: 120px;
+  margin: 8px;
+  border: 2px solid aliceblue;
+  object-fit: contain;
+}
+
+.videos iframe {
+  width: 320px;
+  height: 200px;
+  margin: 8px;
+  border: 2px solid aliceblue;
+}
+
+.links a {
+  display: inline-block;
+  margin: 6px;
+  padding: 6px 10px;
+  border: 1px solid aliceblue;
+  text-decoration: none;
+}
+
+.links a:hover {
+  background-color: chartreuse;
+  color: black;
+}
+
+table {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid aliceblue;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+}
+
+tr:hover {
+  background-color: #202020;
+}
+
+.grupo td {
+  background-color: #333;
+  color: chartreuse;
+  font-weight: bold;
+}
+
+.rodape {
+  margin-top: 30px;
+  padding: 10px;
+  border-top: 1px solid aliceblue;
+}
+
+.caixa {
+  width: 500px;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid aliceblue;
+  background-color: #171717;
+}
+
+.caixa img {
+  width: 120px;
+}
+
+.caixa input {
+  width: 100px;
+  padding: 8px;
+}
+
+.caixa button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.caixa button:hover {
+  background-color: chartreuse;
+}
+
+#mensagem {
+  min-height: 24px;
+  font-weight: bold;
+}
+
+#canvas, #canvasAnimacao {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: white;
+  border: 2px solid aliceblue;
+}
+
+body.copy {
+  background-color: lightgray;
+  color: indigo;
+  font-family: Arial, sans-serif;
+}
+
+body.copy .topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 180px;
+  margin: 7px;
+  padding: 10px 3%;
+  background-color: bisque;
+  border: 3px solid darkblue;
+}
+
+body.copy .topo img {
+  width: 100px;
+}
+
+body.copy .topo h1 {
+  color: darkgreen;
+  font-size: 3rem;
+}
+
+body.copy .menu {
+  margin: 0 7px;
+  padding: 6px;
+  background-color: lightskyblue;
+}
+
+body.copy .menu a {
+  margin: 0 18px;
+  color: darkred;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body.copy .menu a:hover {
+  color: red;
+}
+
+body.copy h2 {
+  color: black;
+}
+
+body.copy p {
+  color: indigo;
+  font: 20px Arial, sans-serif;
+}
+
+body.copy .sessao {
+  padding: 10px;
+}
+
+.livros img {
+  width: 150px;
+  height: 180px;
+  margin: 20px;
+  object-fit: contain;
+}
+
+body.copy .videos iframe {
+  width: 267px;
+  height: 190px;
+}
+
+.contatos table {
+  width: 500px;
+  border: 4px dashed red;
+}
+
+.contatos th {
+  border: 3px double red;
+  background-color: lightgray;
+  color: red;
+}
+
+.contatos td {
+  border: 3px double red;
+  color: red;
+}
+
+.consulta {
+  width: 610px;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: yellow;
+  color: black;
+  font: 14px Arial, sans-serif;
+  text-align: left;
+}
+
+.consulta a {
+  color: darkred;
+}
+
+body.copy .rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px;
+  padding: 10px 3%;
+  background-color: bisque;
+  border: none;
+}
+
+body.copy .rodape p {
+  color: black;
+  font: 15px "Comic Sans MS", cursive, sans-serif;
+}
+
+body.copy .rodape img {
+  width: 60px;
+  height: 65px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .videos iframe {
+    width: 100%;
+  }
+
+  .galeria img {
+    width: 40%;
+    height: auto;
+  }
+
+  body.copy .topo {
+    min-height: 120px;
+  }
+
+  body.copy .topo img {
+    width: 60px;
+  }
+
+  body.copy .topo h1 {
+    font-size: 2rem;
+  }
+
+  .livros img {
+    width: 40%;
+    height: 145px;
+  }
+
+  body.copy .rodape img {
+    width: 42px;
+  }
+}

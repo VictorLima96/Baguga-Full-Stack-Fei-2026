@@ -1,40 +1,46 @@
-const animationCanvas = document.getElementById('canvas-animacao');
-const animationContext = animationCanvas.getContext('2d');
-const picture = new Image();
-picture.src = 'assets/landscape.svg';
+const canvasAnimacao = document.getElementById("canvasAnimacao");
+const ctxAnimacao = canvasAnimacao.getContext("2d");
 
-const size = 180;
-const halfSize = size / 2;
-const position = { x: 150, y: 150 };
-const target = { x: 150, y: 150 };
+const imagem = new Image();
+imagem.src = "assets/landscape.svg";
 
-function limitar(valor, minimo, maximo) {
-  return Math.min(Math.max(valor, minimo), maximo);
+const tamanho = 140;
+const metade = tamanho / 2;
+
+let posicaoX = 150;
+let posicaoY = 150;
+
+function desenhar_imagem() {
+  ctxAnimacao.clearRect(0, 0, 300, 300);
+  ctxAnimacao.drawImage(imagem, posicaoX - metade, posicaoY - metade, tamanho, tamanho);
 }
 
-function atualizarAlvo(event) {
-  const area = animationCanvas.getBoundingClientRect();
-  const escalaX = animationCanvas.width / area.width;
-  const escalaY = animationCanvas.height / area.height;
-  target.x = limitar((event.clientX - area.left) * escalaX, halfSize, animationCanvas.width - halfSize);
-  target.y = limitar((event.clientY - area.top) * escalaY, halfSize, animationCanvas.height - halfSize);
-}
+function mover_imagem(evento) {
+  const area = canvasAnimacao.getBoundingClientRect();
+  const escalaX = canvasAnimacao.width / area.width;
+  const escalaY = canvasAnimacao.height / area.height;
 
-function desenharQuadro() {
-  animationContext.clearRect(0, 0, animationCanvas.width, animationCanvas.height);
-  position.x += (target.x - position.x) * 0.18;
-  position.y += (target.y - position.y) * 0.18;
+  posicaoX = (evento.clientX - area.left) * escalaX;
+  posicaoY = (evento.clientY - area.top) * escalaY;
 
-  if (picture.complete && picture.naturalWidth > 0) {
-    animationContext.drawImage(picture, position.x - halfSize, position.y - halfSize, size, size);
+  if (posicaoX < metade) {
+    posicaoX = metade;
   }
-  requestAnimationFrame(desenharQuadro);
+
+  if (posicaoX > 300 - metade) {
+    posicaoX = 300 - metade;
+  }
+
+  if (posicaoY < metade) {
+    posicaoY = metade;
+  }
+
+  if (posicaoY > 300 - metade) {
+    posicaoY = 300 - metade;
+  }
+
+  desenhar_imagem();
 }
 
-animationCanvas.addEventListener('pointermove', atualizarAlvo);
-// Não zeramos o alvo no pointerleave: a ilustração fica dentro da tela e para na última posição válida.
-picture.addEventListener('load', () => requestAnimationFrame(desenharQuadro), { once: true });
-picture.addEventListener('error', () => {
-  animationContext.fillStyle = '#252822';
-  animationContext.fillText('Não foi possível carregar a paisagem.', 10, 20);
-}, { once: true });
+canvasAnimacao.addEventListener("mousemove", mover_imagem);
+imagem.onload = desenhar_imagem;

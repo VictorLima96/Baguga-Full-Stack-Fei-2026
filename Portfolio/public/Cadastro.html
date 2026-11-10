@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Lima - Cadastro</title>
+<link rel="icon" type="image/x-icon" href="assets/OIP.jpg">
+<link rel="stylesheet" href="bungas.css">
+</head>
+<body>
+
+<nav class="menu">
+  <a class="menus" href="index.html">Home</a>
+  <a class="menus" href="projects.html">Projetos</a>
+  <a class="menus" href="copy.html">Copiando um modelo</a>
+  <a class="menus" href="guess.html">Adivinhação</a>
+  <a class="menus" href="Canvas.html">Canvas</a>
+  <a class="menus" href="Animation.html">Animação</a>
+  <a class="menus" href="Cadastro.html">Cadastro</a>
+  <a class="menus" href="Login.html">Login</a>
+</nav>
+
+<main class="caixa">
+  <h1>Cadastro</h1>
+
+  <p>Preencha os dados para criar um usuário.</p>
+
+  <form method="post" action="/cadastra">
+    <p>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </p>
+
+    <p>
+      <label for="sobrenome">Sobrenome:</label>
+      <input type="text" id="sobrenome" name="sobrenome" required>
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+    </p>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <p>Já tem conta? <a href="Login.html">Fazer login</a></p>
+</main>
+
+<div class="rodape">
+  <p><a href="projects.html">Voltar aos projetos</a></p>
+</div>
+
+</body>
+</html>

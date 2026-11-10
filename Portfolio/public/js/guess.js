@@ -1,54 +1,44 @@
-const guessForm = document.getElementById('guess-form');
-const guessInput = document.getElementById('guess-input');
-const guessFeedback = document.getElementById('guess-feedback');
-const guessPanel = document.getElementById('guess-panel');
-const newGameButton = document.getElementById('new-game');
+const sorteio = Math.random();
+const numero_secreto = Math.floor(sorteio * 100);
 
-let numeroSecreto = gerarNumeroSecreto();
-let jogoEncerrado = false;
+let tentativas = 0;
+let acertou = false;
 
-function gerarNumeroSecreto() {
-  return Math.floor(Math.random() * 100);
-}
-
-function mostrarMensagem(texto, tipo = '') {
-  guessFeedback.textContent = texto;
-  guessFeedback.className = `guess-feedback ${tipo}`.trim();
-}
-
-function iniciarNovoJogo() {
-  numeroSecreto = gerarNumeroSecreto();
-  jogoEncerrado = false;
-  guessInput.disabled = false;
-  guessForm.querySelector('button').disabled = false;
-  guessPanel.classList.remove('is-wrong');
-  guessInput.value = '';
-  mostrarMensagem('Novo número escolhido. Boa sorte!');
-  guessInput.focus();
-}
-
-guessForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (jogoEncerrado) return;
-
-  const palpite = Number(guessInput.value);
-  if (!Number.isInteger(palpite) || palpite < 0 || palpite > 99) {
-    mostrarMensagem('Digite um número inteiro entre 0 e 99.', 'error');
-    guessInput.focus();
+function chutar() {
+  if (acertou) {
     return;
   }
 
-  guessPanel.classList.remove('is-wrong');
-  if (palpite === numeroSecreto) {
-    mostrarMensagem(`Acertou! O número era ${numeroSecreto}.`, 'success');
-    jogoEncerrado = true;
-    guessInput.disabled = true;
-    guessForm.querySelector('button').disabled = true;
-  } else {
-    guessPanel.classList.add('is-wrong');
-    mostrarMensagem(palpite < numeroSecreto ? 'O número secreto é maior. Tente de novo!' : 'O número secreto é menor. Tente de novo!', 'error');
-    guessInput.select();
-  }
-});
+  const campo = document.getElementById("palpite");
+  const valor = parseInt(campo.value);
+  const mensagem = document.getElementById("mensagem");
 
-newGameButton.addEventListener('click', iniciarNovoJogo);
+  if (campo.value === "" || isNaN(valor) || valor < 0 || valor > 99) {
+    mensagem.innerHTML = "Digite um número inteiro de 0 a 99.";
+    return;
+  }
+
+  tentativas = tentativas + 1;
+  document.getElementById("tentativas").innerHTML = tentativas;
+
+  if (valor === numero_secreto) {
+    mensagem.innerHTML = "Acertou! O número era " + numero_secreto + ".";
+    document.getElementById("painel").style.setProperty("background-color", "green");
+    acertou = true;
+    campo.disabled = true;
+  } else if (valor < numero_secreto) {
+    mensagem.innerHTML = "O número secreto é maior. Tente de novo!";
+    document.getElementById("painel").style.setProperty("background-color", "red");
+  } else {
+    mensagem.innerHTML = "O número secreto é menor. Tente de novo!";
+    document.getElementById("painel").style.setProperty("background-color", "red");
+  }
+
+  campo.value = "";
+  campo.focus();
+}
+
+document.getElementById("botao-chutar").addEventListener("click", chutar);
+document.getElementById("botao-novo").addEventListener("click", function () {
+  location.reload();
+});

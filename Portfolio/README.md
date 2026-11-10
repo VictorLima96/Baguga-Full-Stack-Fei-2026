@@ -1,44 +1,116 @@
-# Portfólio de Victor Lima
+# Portfólio - Victor Lima
 
-Site acadêmico feito para os Labs 1–7 de HTML, CSS, JavaScript, Canvas e Node.js/Express. As pastas `Aula ...`, `Lab ...` e `Simulado` foram mantidas como material de estudo e referência. Nesta pasta, o servidor e as configurações ficam juntos; as páginas e recursos estão dentro de `public`.
+Site dos Labs de desenvolvimento web da FEI (2026). O servidor e as páginas do site ficam nesta pasta `Portfolio`. As pastas `Aula ...` continuam na raiz do repositório como material de estudo, e o site também consegue abrir essas páginas.
 
-## Começo rápido no VS Code
+## Como rodar
 
-1. Abra a pasta `Portfolio` no VS Code (ou abra o repositório e entre nela pelo terminal integrado com `cd Portfolio`).
-2. Abra o terminal integrado com **Ctrl + `** e rode `npm install` uma vez.
-3. Rode `npm start` e deixe esse terminal aberto enquanto usa o site.
-4. Abra **http://localhost/** no navegador. Para parar o servidor, volte ao terminal e aperte **Ctrl + C**.
+1. Abra o terminal na pasta `Portfolio`.
+2. Rode `npm install` uma vez para baixar o Express e o EJS.
+3. Rode `npm start`.
+4. Abra `http://localhost/` no navegador.
 
-## Páginas
+Se a porta 80 estiver ocupada ou pedir permissão de Administrador, dá para testar em outra porta:
 
-- `index.html` — apresentação, imagens, lista, links e incorporações de vídeo/mapa.
-- `projects.html` — catálogo dos projetos e atividades.
-- `copy.html` — reprodução do modelo C++ e Java do Lab 3.
-- `guess.html` — jogo de adivinhação de 0 a 99.
-- `canvas.html` — desenho em Canvas 300 × 300.
-- `animation.html` — ilustração que acompanha o ponteiro dentro do Canvas.
+```powershell
+$env:PORT=8080
+npm start
+```
 
-## Instalar e iniciar no Windows
+Depois acesse `http://localhost:8080/`. A entrega continua usando a porta 80, que é o padrão do `server.js`.
 
-1. Instale Node.js LTS.
-2. Abra o PowerShell na pasta `Portfolio` deste repositório.
-3. Execute `npm install` para instalar o Express.
-4. Execute `npm start` para iniciar o servidor na porta 80.
-5. No mesmo computador, abra `http://localhost/`.
+## Acessar de outro computador
 
-O servidor escuta em `0.0.0.0`, portanto outros computadores na mesma rede podem acessar o site. No computador servidor, abra o PowerShell e consulte `ipconfig`; procure o endereço **IPv4** da rede usada. Em outro dispositivo, acesse `http://ENDERECO-IPv4/` (por exemplo, `http://192.168.1.25/`). O dispositivo cliente deve estar na mesma rede.
+1. No computador que está rodando o servidor, abra o PowerShell e digite `ipconfig`.
+2. Procure o **Endereço IPv4** da rede (algo como `192.168.0.10`).
+3. No outro computador, que precisa estar na mesma rede, acesse `http://IP-DO-SERVIDOR/`.
 
-## Permissão, firewall e porta
+O servidor escuta em `0.0.0.0`, então aceita conexões da rede. Se não abrir, confira o Firewall do Windows e permita o Node.js em redes privadas.
 
-- No Windows, a porta 80 pode estar ocupada por outro serviço ou exigir um terminal do PowerShell aberto **como Administrador**. O servidor mostra uma mensagem se não conseguir iniciar. Não encerre serviços do Windows sem saber para que servem.
-- Se o Windows Defender Firewall perguntar, permita Node.js apenas em redes privadas confiáveis. Se a solicitação não aparecer e o acesso remoto falhar, peça ao responsável pelo computador/rede para liberar conexões TCP de entrada na porta 80 para a rede privada.
-- Para testar sem privilégios de administrador, use uma porta alta temporária. No PowerShell: `$env:PORT=8080; npm start`. Acesse `http://localhost:8080/` ou `http://IP-IPv4:8080/`. Feche e abra um novo terminal para voltar ao padrão (porta 80). O requisito de entrega continua sendo a porta 80.
-- O acesso externo pode ser bloqueado pela rede, VPN ou firewall corporativo. Evite expor este servidor à internet pública.
+## Rotas principais
 
-## Atalhos compatíveis
+| Endereço | Página |
+| --- | --- |
+| `/` | `projects.html` (pedido do Lab 8) |
+| `/Home.html` | `index.html` (pedido do Lab 7) |
+| `/Project.html` | `projects.html` (pedido do Lab 7) |
+| `/cadastra` | `Cadastro.html` |
+| `/login` | `Login.html` |
 
-Além das páginas em minúsculas, `/Home.html` abre a página inicial e `/Project.html` abre a lista de projetos, como nos exemplos do enunciado.
+As aulas também ficam disponíveis em `/aulas/aula-01/`, `/aulas/aula-02/` e assim por diante. Os simulados ficam em `/simulado/flexbox/`, `/simulado/grid/` e `/simulado/meu-fazido/`. O jogo extra fica em `/extras/jogo-kniggles/`.
 
-## Observações
+## Labs e Aulas
 
-Os vídeos e o mapa são carregados de serviços externos e precisam de conexão com a internet; se algum provedor bloquear a incorporação, os demais itens do site continuam disponíveis. As imagens servidas pelo portfólio ficam em `public/assets`; as referências originais continuam nas pastas de aula.
+- **Labs**: entregas que valem nota (`Lab 1` até `Lab 8`). As páginas do site estão em `Portfolio/public`.
+- **Aulas**: exercícios feitos em sala (`Aula 01` até `Aula 09`). Ficam nas pastas da raiz e são abertos pelo menu de projetos do site.
+
+A tabela de `projects.html` tem uma parte só para os Labs e outra só para as Aulas, para não misturar as entregas com os exercícios de sala.
+
+## Checklist dos requisitos
+
+### Lab 1 - Página inicial
+
+- [x] `index.html` com `<h1>` com o nome.
+- [x] Parágrafos `<p>` com informações.
+- [x] Lista com os estudos do semestre.
+- [x] Mais de 5 imagens.
+- [x] 3 links externos (FEI, LinkedIn e GitHub).
+- [x] 3 iframes, incluindo 1 mapa do Google Maps.
+
+### Lab 2 - Esqueleto do site
+
+- [x] Menu com links em todas as páginas.
+- [x] `<h1>` em todas as páginas.
+- [x] Tabela em `projects.html` com as colunas "Nome do Projeto" e "Link do projeto".
+- [x] CSS externo em `bungas.css`.
+- [x] Seletores de tag, classe e id.
+- [x] Pseudo-classes `:hover`.
+
+### Lab 3 - Copiando um modelo
+
+- [x] Linha "Copiando um modelo" na tabela.
+- [x] Página `copy.html` com o conteúdo do `info.txt`.
+- [x] Fundo, fontes, cores e posicionamento seguindo a `referencia.jpeg`.
+
+### Lab 4 - Adivinhação
+
+- [x] Linha "Adivinhação" na tabela.
+- [x] Página `guess.html` com `<input>`.
+- [x] Fundo escuro e elementos centralizados.
+- [x] `Math.random()` e `Math.floor()` para sortear o número.
+- [x] `if` para verificar se o palpite é maior, menor ou igual.
+- [x] `document.getElementById(...).style.setProperty("background-color", "red")` quando o usuário erra.
+
+### Lab 5 - Canvas
+
+- [x] Linha "Canvas" na tabela.
+- [x] Página `Canvas.html` com canvas de 300 x 300.
+- [x] Fundo e centralização no CSS.
+- [x] Funções `desenhar_quadrado`, `desenhar_linha`, `desenhar_arco` e `escrever`.
+- [x] Figura montada usando as funções.
+
+### Lab 6 - Animação
+
+- [x] Linha "Animação" na tabela.
+- [x] Página `Animation.html` com canvas de 300 x 300.
+- [x] Fundo e centralização no CSS.
+- [x] Imagem controlada pelo mouse.
+- [x] Ponteiro centralizado na imagem.
+- [x] Imagem limitada dentro do canvas, mesmo quando o mouse sai.
+
+### Lab 7 - Servidor estático
+
+- [x] Servidor Express na porta 80.
+- [x] Todas as páginas do site servidas pelo Express.
+- [x] Acesso pela rede usando o IP do computador.
+
+### Lab 8 - Get, Post e Template
+
+- [x] Linha "Get - Post - Template" na tabela.
+- [x] Páginas `Cadastro.html` e `Login.html` com CSS centralizado.
+- [x] Servidor Express na porta 80.
+- [x] `/` abre a página de projetos.
+- [x] `/cadastra` abre o cadastro e recebe o POST do formulário.
+- [x] `/login` abre o login e recebe o POST do formulário.
+- [x] Página dinâmica `views/resposta.ejs` mostrando o status do cadastro/login.
+
+Os usuários ficam guardados na memória do servidor. Se reiniciar o Node.js, é preciso cadastrar de novo.
