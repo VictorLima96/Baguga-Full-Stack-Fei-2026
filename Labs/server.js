@@ -126,3 +126,49 @@ servidor.on("error", function (erro) {
     console.log("A porta 80 pode estar ocupada ou precisar de permissão de Administrador.");
   }
 });
+
+var mongo = require("mongodb");
+
+const MongoClient = mongo.MongoClient;
+
+const uri = "mongodb+srv://%3Cdb_username%3E:9rPYkosv0WYpbFae@cluster0.9zipbpj.mongodb.net/";
+
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+var dbo = client.db("exemplo_bd");
+
+var usuariosCollection = dbo.collection("usuarios");
+
+app.post("/cadastra", function (req, res) {
+  // Lógica para cadastrar usuário
+
+  var data = {db_nome: req.body.nome, dblogin: req.body.login, db_senha: req.body.senha};
+
+  usuariosCollection.insertOne(data, function (err) {
+
+    if (err) {
+
+      console.log(err);
+      
+      res.render("resposta.ejs", {resposta: "Erro ao cadastrar usuário."});
+
+    } else {
+
+      res.render("resposta.ejs", {resposta: "Usuário cadastrado com sucesso."});
+
+    }
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+});
