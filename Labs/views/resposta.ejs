@@ -3,9 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<% if (typeof modo !== "undefined") { %>
+<title>Resposta - Lembretes</title>
+<link rel="icon" type="image/png" href="/assets/OIP.png">
+<link rel="stylesheet" href="/lembretes.css">
+<% } else { %>
 <title>Resposta do Servidor</title>
+<link rel="icon" type="image/png" href="/assets/OIP.png">
 <link rel="stylesheet" href="/bungas.css">
+<% } %>
 </head>
+<% if (typeof modo !== "undefined" && modo === "cadastro_lembrete") { %>
+<body class="pagina-resposta">
+
+  <h1>Resposta:</h1>
+
+  <h2><%= mensagem %></h2>
+
+  <p><a class="link-voltar" href="/lembretes">Voltar</a></p>
+
+</body>
+<% } else if (typeof modo !== "undefined" && modo === "lista_lembretes") { %>
+<body class="pagina-resposta">
+
+  <p><a class="link-voltar" href="/lembretes">Voltar</a></p>
+
+  <h1>Lista de lembretes:</h1>
+
+  <% if (lembretes.length === 0) { %>
+    <p>Nenhum lembrete cadastrado até o momento.</p>
+  <% } else { %>
+    <% for (let i = 0; i < lembretes.length; i++) { %>
+      <div class="caixa-item-lembrete">
+        <p>Título: <%= lembretes[i].titulo %></p>
+        <p>Descrição: <%= lembretes[i].descricao %></p>
+        <p>Local: <%= lembretes[i].local %></p>
+        <p>Data: <%= lembretes[i].data %></p>
+        <p>Hora: <%= lembretes[i].hora %></p>
+      </div>
+    <% } %>
+  <% } %>
+
+</body>
+<% } else { %>
 <body>
 
 <nav class="menu">
@@ -31,4 +71,5 @@
 </main>
 
 </body>
+<% } %>
 </html>

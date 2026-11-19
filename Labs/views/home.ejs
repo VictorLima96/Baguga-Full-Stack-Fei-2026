@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Lima - Cadastrar Lembretes</title>
+<link rel="icon" type="image/png" href="/assets/OIP.png">
+<link rel="stylesheet" href="/lembretes.css">
+</head>
+<body class="pagina-home">
+
+  <h1 class="titulo-principal"><%= tituloPagina %></h1>
+
+  <img class="icone-lembrete" src="/assets/lembrete.png" alt="Ícone de sino de lembrete">
+
+  <h2 class="subtitulo-lembrete">O que você gostaria de lembrar?</h2>
+
+  <ul class="lista-categorias">
+    <% for (let i = 0; i < categorias.length; i++) { %>
+      <li><%= categorias[i] %></li>
+    <% } %>
+  </ul>
+
+  <form class="form-lembrete" method="post" action="/cadastrar_lembrete">
+    <div class="linha-campo">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo" required>
+    </div>
+
+    <div class="linha-campo">
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" required>
+    </div>
+
+    <div class="linha-campo">
+      <label for="local">Local:</label>
+      <input type="text" id="local" name="local" required>
+    </div>
+
+    <div class="linha-campo">
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+    </div>
+
+    <div class="linha-campo">
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required>
+    </div>
+
+    <button class="botao-acao" type="submit">Salvar</button>
+  </form>
+
+  <form class="form-listar" method="get" action="/listar_lembretes">
+    <button class="botao-acao" type="submit">Listar</button>
+  </form>
+
+  <div class="rodape-lembrete">
+    <img class="girar" src="/assets/OIP.png" alt="OIP rodando">
+    <p><a class="link-voltar" href="/projects.html">Voltar aos projetos</a></p>
+  </div>
+
+</body>
+</html>
